@@ -1,0 +1,5 @@
+elasticsearch:
+  url: localhost:9200
+
+server:
+  port: 8086
