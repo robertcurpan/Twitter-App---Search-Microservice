@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/search")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://localhost:80")
 public class SearchController {
 
     @Autowired
