@@ -1,0 +1,25 @@
+name: Twitter App - Search Microservice Workflow
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ["self-hosted", "search"]
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: | 
+        mvn -B package --file pom.xml
+    - name: Run JAR File
+      run: sudo kill -9 `sudo lsof -t -i:8086` & sudo nohup java -jar /home/ec2-user/twitter-app/search-microservice/actions-runner/_work/Twitter-App---Search-Microservice/Twitter-App---Search-Microservice/target/searchmicroservice-jar-with-dependencies.jar &
