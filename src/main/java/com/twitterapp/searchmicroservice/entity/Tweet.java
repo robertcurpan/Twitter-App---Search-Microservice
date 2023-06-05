@@ -11,7 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import java.util.Date;
 
 
-@Document(indexName = "tweet")
+@Document(indexName = "tweets_by_robert_c")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Tweet {
 

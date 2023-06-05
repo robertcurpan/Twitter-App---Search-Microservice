@@ -30,7 +30,7 @@ import java.util.Map;
 @Repository
 public class SearchRepository {
 
-    public static final String INDEX_NAME = "tweets_index";
+    public static final String INDEX_NAME = "tweets_by_robert_c";
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Autowired
