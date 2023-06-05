@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/search")
-@CrossOrigin(value = {"http://34.245.12.59"})
+@CrossOrigin(value = {"http://54.228.142.58"})
 public class SearchController {
 
     @Autowired
